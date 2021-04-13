@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,600;1,100;1,300;1,400;1,600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+    font: inherit;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/*FIM RESET*/
+
+body {
+    background: linear-gradient(45deg, #dcaeee, #94e9b3) no-repeat;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main.container {
+    background: rgb( 255, 255, 255, 0.5);
+    min-width: 320px;
+    min-height: 40vh;
+    padding: 2em;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+main.contianer,
+h2 {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+    position: relative;
+}
+
+main.container>h2::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    bottom: 2px;
+    left: 0;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #dcaeee, #94e9b3);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field {
+    position: relative;
+}
+
+.input-field:first-child {
+    margin-bottom: 1em;
+}
+
+.input-field .underline::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    border-radius: 8px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.input-field .underline::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    border-radius: 8px;
+    left: 0;
+    background: linear-gradient(to right, #d493f2, #d493f2);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+
+.input-field input:focus~.underline::after {
+    transform: scalex(1);
+}
+
+.input-field input {
+    outline: none;
+    font-size: 1em;
+    background: transparent;
+    color: rgba(0, 0, 0, 0.8);
+    padding: 3px;
+}
+
+.input-field input::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+    font-style: italic;
+}
+
+form input[type="submit"] {
+    font-size: 1.125em;
+    font-weight: 500;
+    background: linear-gradient(to right, #d493f2, #b144e4);
+    color: #FFF;
+    padding: 0.188em;
+    margin-top: 1.5em;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.34s ease;
+}
+
+form input[type="submit"]:hover {
+    letter-spacing: 0.188em;
+    background: linear-gradient(to left, #d493f2, #b144e4);
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+}
+
+.footer span {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+
+.social-media {
+    padding: 0.188em;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.34s ease;
+}
+
+.social-media a i {
+    padding: 0.188em;
+    margin: 0.188em;
+    width: 30px;
+}
+
+.footer .social-media a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.footer .social-media>.github {
+    background: linear-gradient(36deg, rgba(22, 27, 34, 1) 35%, rgba(78, 102, 136, 1) 100%);
+    margin-bottom: 0.8em;
+}
+
+.social-media>.github:hover {
+    letter-spacing: 0.125em;
+}
+
+.footer .social-media>.google {
+    background: linear-gradient(90deg, rgba(234, 67, 53, 1) 35%, rgba(252, 228, 23, 1) 100%);
+    margin-bottom: 0.8em;
+}
+
+.social-media>.google:hover {
+    letter-spacing: 0.125em;
+}
+
+.footer .social-media>.facebook {
+    background: linear-gradient(90deg, rgba(0, 81, 180, 1) 35%, rgba(23, 170, 252, 1) 100%);
+}
+
+.social-media>.facebook:hover {
+    letter-spacing: 0.125em;
+}
